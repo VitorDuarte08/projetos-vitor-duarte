@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja de Carros de Luxo</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/auth-modal.css">
+</head>
+<body>
+    <header class="header-com-banner" style="position:relative;">
+        <!-- Botão Estoque no canto inferior esquerdo do banner -->
+        <a href="componentes/estoque.html"
+           class="btn-estoque"
+           style="position:absolute; left:24px; bottom:24px; z-index:10; display:inline-block; padding:10px 24px; background:#bfa600; color:#fff; border-radius:8px; font-weight:bold; text-decoration:none; box-shadow:0 2px 12px #bfa60022; transition:background 0.2s;">
+            Estoque
+        </a>
+        <div class="auth-top-buttons">
+            <a href="componentes/entrar.html" class="btn-auth-topo">Entrar</a>
+            <a href="componentes/criar-conta.html" class="btn-auth-topo">Criar Conta</a>
+        </div>
+        <div class="banner-bg">
+            <img src="imagens/banners/banner1.jpg" class="banner-img ativo" alt="">
+            <img src="imagens/banners/banner2.jpg" class="banner-img" alt="">
+            <img src="imagens/banners/banner3.jpg" class="banner-img" alt="">
+            <img src="imagens/banners/banner4.jpg" class="banner-img" alt="">
+            <img src="imagens/banners/banner5.jpg" class="banner-img" alt="">
+        </div>
+        <div class="header-content">
+            <img src="imagens/logo/logo-site.avif" alt="Logo do Site" class="logo-site">
+            <h1 class="main-title">Loja de Carros de Luxo</h1>
+            <div class="subtitle">
+                Descubra o universo dos superesportivos mais desejados do mundo.<br>
+                Escolha sua marca favorita e viva a experiência do luxo sobre rodas.
+            </div>
+        </div>
+        <button class="btn-marcas-toggle" id="btnMarcasToggle" aria-label="Abrir marcas">
+            <svg width="32" height="32" viewBox="0 0 32 32">
+                <rect y="7" width="32" height="4" rx="2" fill="currentColor"/>
+                <rect y="15" width="32" height="4" rx="2" fill="currentColor"/>
+                <rect y="23" width="32" height="4" rx="2" fill="currentColor"/>
+            </svg>
+            <span>Marcas</span>
+        </button>
+        <nav class="marcas-nav-dropdown" id="marcasNavDropdown">
+            <ul>
+                <li><a href="componentes/ferrari.html">Ferrari</a></li>
+                <li><a href="componentes/porsche.html">Porsche</a></li>
+                <li><a href="componentes/lamborghini.html">Lamborghini</a></li>
+                <li><a href="componentes/bmw.html">BMW</a></li>
+                <li><a href="componentes/audi.html">Audi</a></li>
+                <li><a href="componentes/mercedes.html">Mercedes-Benz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="carros-disponiveis-title">Carros Disponíveis</h2>
+            <!-- Barra de pesquisa removida -->
+            <div class="carros-section carros-grid-2linhas" id="listaCarros">
+                <!-- Primeira linha: Ferrari, Porsche, Lamborghini -->
+                <div class="carro-card">
+                    <h3>Ferrari</h3>
+                    <img src="imagens/logo/ferrari.svg" alt="Ferrari">
+                    <p>
+                        A Ferrari representa o ápice da engenharia italiana, combinando tradição, inovação e um design inconfundível. Sinta a emoção de pilotar um ícone das pistas e das ruas.
+                    </p>
+                    <a href="componentes/ferrari.html" class="btn-saiba-mais">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <polyline points="12,8 20,16 12,24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Saiba mais
+                    </a>
+                </div>
+                <div class="carro-card">
+                    <h3>Porsche</h3>
+                    <img src="imagens/logo/porsche.png" alt="Porsche" style="width:100px; height:100px;">
+                    <p>
+                        A Porsche é sinônimo de elegância, performance e tecnologia de ponta. Descubra modelos lendários que unem esportividade, luxo e exclusividade em cada detalhe.
+                    </p>
+                    <a href="componentes/porsche.html" class="btn-saiba-mais">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <polyline points="12,8 20,16 12,24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Saiba mais
+                    </a>
+                </div>
+                <div class="carro-card">
+                    <h3>Lamborghini</h3>
+                    <img src="imagens/logo/lamborghini.png" alt="Lamborghini">
+                    <p>
+                        Lamborghini: ousadia, potência e design futurista. Viva a experiência de dirigir um supercarro que desafia limites e conquista olhares por onde passa.
+                    </p>
+                    <a href="componentes/lamborghini.html" class="btn-saiba-mais">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <polyline points="12,8 20,16 12,24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Saiba mais
+                    </a>
+                </div>
+                <!-- Segunda linha: BMW, Audi, Mercedes-Benz -->
+                <div class="carro-card">
+                    <h3>BMW</h3>
+                    <img src="imagens/logo/bmw.png" alt="BMW">
+                    <p>
+                        BMW: esportividade, luxo e tecnologia alemã em sua essência. Descubra modelos que unem prazer ao dirigir, inovação e design marcante.
+                    </p>
+                    <a href="componentes/bmw.html" class="btn-saiba-mais">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <polyline points="12,8 20,16 12,24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Saiba mais
+                    </a>
+                </div>
+                <div class="carro-card">
+                    <h3>Audi</h3>
+                    <img src="imagens/logo/audi.avif" alt="Audi">
+                    <p>
+                        Audi: sofisticação, esportividade e tecnologia quattro. Conheça carros que unem design inovador, conforto e desempenho de tirar o fôlego.
+                    </p>
+                    <a href="componentes/audi.html" class="btn-saiba-mais">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <polyline points="12,8 20,16 12,24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Saiba mais
+                    </a>
+                </div>
+                <div class="carro-card">
+                    <h3>Mercedes-Benz</h3>
+                    <img src="imagens/logo/mercedes.png" alt="Mercedes-Benz">
+                    <p>
+                        Mercedes-Benz: tradição, luxo e inovação. Sinta o requinte e a performance dos modelos que são referência mundial em conforto e tecnologia.
+                    </p>
+                    <a href="componentes/mercedes.html" class="btn-saiba-mais">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <polyline points="12,8 20,16 12,24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Saiba mais
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="sobre-loja-section">
+            <h2 class="sobre-loja-title">Sobre a Loja</h2>
+            <p class="sobre-loja-text">
+                Nossa loja é referência nacional em veículos de luxo e superesportivos. Trabalhamos apenas com as melhores marcas do mundo, oferecendo atendimento personalizado, transparência e garantia de procedência em cada automóvel.
+            </p>
+            <ul class="sobre-loja-list">
+                <li>Estoque exclusivo com os modelos mais desejados do mercado.</li>
+                <li>Equipe especializada para consultoria e test-drive.</li>
+                <li>Financiamento, consórcio e avaliação do seu seminovo.</li>
+                <li>Entrega em todo o Brasil com segurança e agilidade.</li>
+            </ul>
+        </section>
+    </main>
+    <footer style="background:#111; padding:24px 0; margin-top:40px;">
+        <p style="text-align:center; color:#fff; margin:0; font-size:1.1rem;">
+            &copy; 2023 Loja de Carros de Luxo. Todos os direitos reservados.
+        </p>
+    </footer>
+    <script>
+        // Carrossel de imagens do header
+        const banners = document.querySelectorAll('.banner-img');
+        let idx = 0;
+        setInterval(() => {
+            banners.forEach((img, i) => img.classList.toggle('ativo', i === idx));
+            idx = (idx + 1) % banners.length;
+        }, 2000);
+
+        // Dropdown de marcas
+        const btnMarcasToggle = document.getElementById('btnMarcasToggle');
+        const marcasNavDropdown = document.getElementById('marcasNavDropdown');
+        btnMarcasToggle.addEventListener('click', (e) => {
+            marcasNavDropdown.classList.toggle('aberto');
+            btnMarcasToggle.classList.toggle('ativo');
+            e.stopPropagation();
+        });
+        document.addEventListener('click', (e) => {
+            if (marcasNavDropdown.classList.contains('aberto')) {
+                marcasNavDropdown.classList.remove('aberto');
+                btnMarcasToggle.classList.remove('ativo');
+            }
+        });
+        marcasNavDropdown.addEventListener('click', (e) => e.stopPropagation());
+    </script>
+</body>
+</html>

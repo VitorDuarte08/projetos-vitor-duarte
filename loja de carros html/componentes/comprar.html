@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra - Loja de Carros</title>
+    <link rel="stylesheet" href="../css/comprar.css">
+    <link rel="stylesheet" href="../css/auth-pages.css">
+</head>
+<body>
+    <div class="auth-top-buttons">
+        <a href="entrar.html" class="btn-auth-topo">Entrar</a>
+        <a href="criar-conta.html" class="btn-auth-topo">Criar Conta</a>
+    </div>
+    <img src="../imagens/logo/logo-site.avif" alt="Logo Loja de Carros" class="logo-topo">
+    <header>
+        <h1>Finalizar Compra</h1>
+        <a href="../index.html" class="btn-voltar">
+            <svg viewBox="0 0 32 32" fill="none">
+                <polyline points="20,8 12,16 20,24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Voltar para a página inicial
+        </a>
+    </header>
+    <main>
+        <section class="resumo-compra">
+            <h2>Resumo do Veículo</h2>
+            <div class="carro-resumo">
+                <img id="carro-img" src="../imagens/exemplo-carro.webp" alt="Imagem do carro selecionado" class="carro-img">
+                <div class="carro-info">
+                    <div class="carro-nome" id="carro-nome">Nome do Carro Selecionado</div>
+                    <div class="carro-preco" id="carro-preco">R$ 0.000.000</div>
+                    <div class="carro-detalhes" id="carro-detalhes">
+                        Detalhes do carro selecionado aparecerão aqui.<br>
+                        (Exemplo: Motor, potência, cor, ano, etc.)
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="dados-comprador">
+            <h2>Seus Dados</h2>
+            <form class="form-compra">
+                <label>
+                    Nome Completo
+                    <input type="text" name="nome" required>
+                </label>
+                <label>
+                    E-mail
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Telefone
+                    <input type="tel" name="telefone" required>
+                </label>
+                <label>
+                    CPF
+                    <input type="text" name="cpf" required>
+                </label>
+                <label>
+                    Endereço Completo
+                    <input type="text" name="endereco" required>
+                </label>
+                <label>
+                    Cidade
+                    <input type="text" name="cidade" required>
+                </label>
+                <label>
+                    Estado
+                    <input type="text" name="estado" required>
+                </label>
+                <label>
+                    CEP
+                    <input type="text" name="cep" required>
+                </label>
+                <h3>Forma de Pagamento</h3>
+                <label>
+                    <input type="radio" name="pagamento" value="cartao" required> Cartão de Crédito
+                </label>
+                <label>
+                    <input type="radio" name="pagamento" value="boleto"> Boleto Bancário
+                </label>
+                <label>
+                    <input type="radio" name="pagamento" value="pix"> PIX
+                </label>
+                <button type="submit" class="btn-finalizar">Finalizar Compra</button>
+            </form>
+        </section>
+    </main>
+    <footer style="background:#111; padding:24px 0; margin-top:40px;">
+        <p style="text-align:center; color:#fff; margin:0; font-size:1.1rem;">
+            &copy; 2023 Loja de Carros de Luxo. Todos os direitos reservados.
+        </p>
+    </footer>
+    <script>
+        // Pega os parâmetros da URL
+        function getParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
+        // Atualiza os dados do carro na página de compra
+        const nome = getParam('nome');
+        const img = getParam('img');
+        const preco = getParam('preco');
+        if (nome) document.getElementById('carro-nome').textContent = nome;
+        if (img) document.getElementById('carro-img').src = img;
+        if (preco) document.getElementById('carro-preco').textContent = 'R$ ' + Number(preco).toLocaleString('pt-BR');
+    </script>
+</body>
+</html>

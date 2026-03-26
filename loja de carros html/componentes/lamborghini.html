@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamborghini - Coleção Exclusiva</title>
+    <link rel="stylesheet" href="../css/lamborghini.css">
+    <link rel="stylesheet" href="../css/auth-pages.css">
+</head>
+<body>
+    <div class="auth-top-buttons">
+        <a href="entrar.html" class="btn-auth-topo">Entrar</a>
+        <a href="criar-conta.html" class="btn-auth-topo">Criar Conta</a>
+    </div>
+    <img src="../imagens/logo/logo-site.avif" alt="Logo Loja de Carros" class="logo-topo">
+    <header>
+        <h1>Lamborghini - Coleção Exclusiva</h1>
+        <a href="../index.html" class="btn-voltar">
+            <svg viewBox="0 0 32 32" fill="none">
+                <polyline points="20,8 12,16 20,24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Voltar para a página inicial
+        </a>
+    </header>
+
+    <!-- Lamborghini Aventador -->
+    <div id="aventador" class="modelo-nome">Lamborghini Aventador</div>
+    <section class="modelo-section">
+        <div class="carrossel" data-carro="aventador">
+            <button class="anterior" aria-label="Imagem anterior" onclick="mudarImagem('aventador', -1)">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <polyline points="22,8 14,18 22,28" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <img id="img-lamborghini-aventador" src="../imagens/lamborghini/lamborghini-aventador-1.webp" alt="Lamborghini Aventador">
+            <button class="proximo" aria-label="Próxima imagem" onclick="mudarImagem('aventador', 1)">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <polyline points="14,8 22,18 14,28" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="modelo-info" style="margin-top:-30px;">
+            <div class="modelo-preco">R$ 4.500.000</div>
+            <div class="modelo-detalhes">
+                O Lamborghini Aventador é sinônimo de potência e exclusividade. Seu motor V12 e design agressivo fazem dele um superesportivo lendário, feito para quem busca o ápice da emoção ao dirigir.
+            </div>
+            <ul class="modelo-especificacoes">
+                <li>Motor: 6.5L V12 aspirado</li>
+                <li>Potência: 770 cv</li>
+                <li>0-100 km/h: 2,8 s</li>
+                <li>Velocidade máxima: 350 km/h</li>
+                <li>Câmbio: ISR de 7 marchas</li>
+                <li>Tração: Integral</li>
+            </ul>
+            <a href="comprar.html?nome=Lamborghini Aventador&img=../imagens/lamborghini/lamborghini-aventador-1.webp&preco=4500000" class="btn-comprar">Comprar</a>
+        </div>
+    </section>
+
+    <!-- Lamborghini Huracán -->
+    <div id="huracan" class="modelo-nome">Lamborghini Huracán</div>
+    <section class="modelo-section">
+        <div class="carrossel" data-carro="huracan">
+            <button class="anterior" aria-label="Imagem anterior" onclick="mudarImagem('huracan', -1)">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <polyline points="22,8 14,18 22,28" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <img id="img-lamborghini-huracan" src="../imagens/lamborghini/lamborghini-huracan-1.webp" alt="Lamborghini Huracán">
+            <button class="proximo" aria-label="Próxima imagem" onclick="mudarImagem('huracan', 1)">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <polyline points="14,8 22,18 14,28" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="modelo-info" style="margin-top:-30px;">
+            <div class="modelo-preco">R$ 3.200.000</div>
+            <div class="modelo-detalhes">
+                O Lamborghini Huracán combina tecnologia de ponta, design marcante e desempenho impressionante. Um superesportivo para quem busca exclusividade e adrenalina.
+            </div>
+            <ul class="modelo-especificacoes">
+                <li>Motor: 5.2L V10 aspirado</li>
+                <li>Potência: 640 cv</li>
+                <li>0-100 km/h: 2,9 s</li>
+                <li>Velocidade máxima: 325 km/h</li>
+                <li>Câmbio: LDF de 7 marchas</li>
+                <li>Tração: Integral</li>
+            </ul>
+            <a href="comprar.html?nome=Lamborghini Huracán&img=../imagens/lamborghini/lamborghini-huracan-1.webp&preco=3200000" class="btn-comprar">Comprar</a>
+        </div>
+    </section>
+
+    <!-- Lamborghini Urus -->
+    <div id="urus" class="modelo-nome">Lamborghini Urus</div>
+    <section class="modelo-section">
+        <div class="carrossel" data-carro="urus">
+            <button class="anterior" aria-label="Imagem anterior" onclick="mudarImagem('urus', -1)">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <polyline points="22,8 14,18 22,28" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <img id="img-lamborghini-urus" src="../imagens/lamborghini/lamborghini-urus-1.webp" alt="Lamborghini Urus">
+            <button class="proximo" aria-label="Próxima imagem" onclick="mudarImagem('urus', 1)">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <polyline points="14,8 22,18 14,28" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="modelo-info" style="margin-top:-30px;">
+            <div class="modelo-preco">R$ 3.800.000</div>
+            <div class="modelo-detalhes">
+                O Lamborghini Urus é o SUV mais rápido do mundo, unindo luxo, espaço e desempenho esportivo em um só carro. Perfeito para quem quer exclusividade com versatilidade.
+            </div>
+            <ul class="modelo-especificacoes">
+                <li>Motor: 4.0L V8 biturbo</li>
+                <li>Potência: 650 cv</li>
+                <li>0-100 km/h: 3,6 s</li>
+                <li>Velocidade máxima: 305 km/h</li>
+                <li>Câmbio: Automático de 8 marchas</li>
+                <li>Tração: Integral</li>
+            </ul>
+            <a href="comprar.html?nome=Lamborghini Urus&img=../imagens/lamborghini/lamborghini-urus-1.webp&preco=3800000" class="btn-comprar">Comprar</a>
+        </div>
+    </section>
+
+    <footer style="background:#111; padding:24px 0; margin-top:40px;">
+        <p style="text-align:center; color:#fff; margin:0; font-size:1.1rem;">
+            &copy; 2023 Loja de Carros de Luxo. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+const imagens = {
+    aventador: [
+        "../imagens/lamborghini/lamborghini-aventador-1.webp",
+        "../imagens/lamborghini/lamborghini-aventador-2.webp",
+        "../imagens/lamborghini/lamborghini-aventador-3.webp",
+        "../imagens/lamborghini/lamborghini-aventador-4.webp",
+        "../imagens/lamborghini/lamborghini-aventador-5.webp"
+    ],
+    huracan: [
+        "../imagens/lamborghini/lamborghini-huracan-1.webp",
+        "../imagens/lamborghini/lamborghini-huracan-2.webp",
+        "../imagens/lamborghini/lamborghini-huracan-3.webp",
+        "../imagens/lamborghini/lamborghini-huracan-4.webp",
+        "../imagens/lamborghini/lamborghini-huracan-5.webp"
+    ],
+    urus: [
+        "../imagens/lamborghini/lamborghini-urus-1.webp",
+        "../imagens/lamborghini/lamborghini-urus-2.webp",
+        "../imagens/lamborghini/lamborghini-urus-3.webp",
+        "../imagens/lamborghini/lamborghini-urus-4.webp",
+        "../imagens/lamborghini/lamborghini-urus-5.webp"
+    ]
+};
+
+const indices = { aventador: 0, huracan: 0, urus: 0 };
+
+function mudarImagem(modelo, direcao) {
+    const total = imagens[modelo].length;
+    indices[modelo] = (indices[modelo] + direcao + total) % total;
+    const img = document.getElementById(`img-lamborghini-${modelo}`);
+    img.src = imagens[modelo][indices[modelo]];
+}
+</script>
+
+<style>
+.carrossel-imagem-legenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrossel-imagem-legenda img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.carrossel-legenda {
+    font-size: 1.08rem;
+    color: #bfa600;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: center;
+}
+</style>
+</body>
+</html>

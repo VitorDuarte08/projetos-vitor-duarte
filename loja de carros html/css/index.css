@@ -1,0 +1,443 @@
+/* CSS exclusivo para index.html */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f6f6;
+}
+
+.header-com-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #f6f6f6;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+/* Banner branco transparente por cima para suavizar a transição */
+.header-com-banner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.38) 0%, rgba(255,255,255,0.12) 60%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    opacity: 0;
+    transition: opacity 0.7s;
+    z-index: 1;
+    background: #f6f6f6;
+}
+.banner-img.ativo {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Botões de autenticação ABSOLUTOS sobre o banner */
+.auth-top-buttons {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    z-index: 10;
+    display: flex;
+    gap: 12px;
+    padding: 0;
+}
+
+/* Conteúdo do header acima do banner */
+.header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Sobe o conteúdo para o topo */
+    height: 100%;
+    padding-top: 18px; /* Reduzido para subir tudo */
+}
+
+.logo-site {
+    width: 170px;
+    max-width: 90vw;
+    margin-bottom: 10px;
+    margin-top: 0;
+    display: block;
+}
+
+.main-title {
+    color: #fff;
+    font-size: 2.7rem;
+    margin: 0 0 6px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.subtitle {
+    color: #fff;
+    font-size: 1.18rem;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+/* Botões das marcas centralizados e amarelos */
+.marcas-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0; /* Menor margem para subir os botões */
+}
+
+.marcas-nav ul li a {
+    background: #bfa600;
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.marcas-nav ul li a:hover {
+    background: #fff;
+    color: #bfa600;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    border: 1.5px solid #bfa600;
+}
+
+.carros-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 32px;
+    margin: 48px auto 0 auto;
+    max-width: 1200px;
+    padding: 0 16px;
+}
+.carros-grid-2linhas {
+    grid-template-rows: repeat(2, 1fr);
+}
+.carro-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 18px 28px 18px;
+    text-align: center;
+    transition: transform 0.18s, box-shadow 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carro-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+}
+.carro-card h3 {
+    color: #bfa600;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.carro-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    background: transparent;      /* Remove fundo branco */
+    border-radius: 0;             /* Remove arredondamento para logos não redondas */
+    box-shadow: none;             /* Remove sombra para ficar mais clean */
+    display: block;
+}
+
+/* Se quiser deixar só as logos não-redondas com fundo arredondado, use uma classe extra no HTML:
+   <img src="..." class="logo-arredondada">
+*/
+.logo-arredondada {
+    background: #fff;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.carro-card p {
+    color: #444;
+    font-size: 1.08rem;
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+.btn-saiba-mais {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #bfa600;
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    letter-spacing: 1px;
+}
+.btn-saiba-mais:hover {
+    background: #222;
+    color: #bfa600;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+.btn-saiba-mais svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+}
+.carros-disponiveis-title {
+    text-align: center;
+    color: #bfa600;
+    font-size: 2.1rem;
+    margin-top: 48px;
+    margin-bottom: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.sobre-loja-section {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: 60px auto 0 auto;
+    padding: 36px 24px 32px 24px;
+}
+.sobre-loja-title {
+    color: #bfa600;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+.sobre-loja-text {
+    color: #444;
+    font-size: 1.13rem;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+.sobre-loja-list {
+    color: #222;
+    font-size: 1.08rem;
+    margin: 0;
+    padding-left: 18px;
+}
+.btn-auth-topo {
+    background: #bfa600;
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-auth-topo:hover {
+    background: #222;
+    color: #bfa600;
+}
+
+/* Botão flutuante de marcas */
+.btn-marcas-toggle {
+    position: absolute;
+    bottom: 36px;
+    right: 48px;
+    z-index: 20;
+    background: #bfa600;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 26px 12px 18px;
+    font-size: 1.13rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-marcas-toggle svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+.btn-marcas-toggle:hover,
+.btn-marcas-toggle.ativo {
+    background: #fff;
+    color: #bfa600;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+}
+
+/* Dropdown animado das marcas */
+.marcas-nav-dropdown {
+    position: absolute;
+    bottom: 90px;
+    right: 48px;
+    z-index: 30;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 18px 0 12px 0;
+    min-width: 210px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.28s, transform 0.28s;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.marcas-nav-dropdown.aberto {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+.marcas-nav-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.marcas-nav-dropdown li {
+    margin: 0;
+    padding: 0;
+}
+.marcas-nav-dropdown a {
+    display: block;
+    padding: 12px 32px 12px 24px;
+    color: #bfa600;
+    font-size: 1.09rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.18s, color 0.18s;
+}
+.marcas-nav-dropdown a:hover {
+    background: #bfa600;
+    color: #fff;
+}
+
+/* Remove o menu de marcas antigo do topo */
+.marcas-nav {
+    display: none !important;
+}
+
+/* Responsivo para o botão e dropdown */
+@media (max-width: 700px) {
+    .btn-marcas-toggle {
+        bottom: 18px;
+        right: 12px;
+        padding: 10px 18px 10px 12px;
+        font-size: 1rem;
+    }
+    .marcas-nav-dropdown {
+        bottom: 60px;
+        right: 12px;
+        min-width: 150px;
+        padding: 10px 0 8px 0;
+    }
+    .marcas-nav-dropdown a {
+        padding: 10px 18px 10px 14px;
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header-com-banner,
+    .banner-bg,
+    .banner-img {
+        width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
+    }
+}
+@media (max-width: 700px) {
+    .header-com-banner {
+        height: 280px;
+    }
+    .banner-bg {
+        height: 280px;
+    }
+    .logo-site {
+        width: 110px;
+    }
+    .main-title {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 1100px) {
+    .carros-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 700px) {
+    .carros-section {
+        grid-template-columns: 1fr;
+        gap: 28px 0;
+    }
+    .carro-card {
+        padding: 24px 8vw 20px 8vw;
+    }
+    .carro-card img {
+        width: 110px;
+        height: 110px;
+    }
+}
+@media (max-width: 600px) {
+    .header-content {
+        padding: 0 2vw;
+    }
+    .carro-card {
+        padding: 18px 2vw 16px 2vw;
+    }
+    .carro-card img {
+        width: 90px;
+        height: 90px;
+    }
+}

@@ -1,0 +1,155 @@
+body {
+    background: #f6f6f6;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.logo-topo {
+    display: block;
+    margin: 32px auto 0 auto;
+    max-width: 180px;
+    height: auto;
+}
+header h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #bfa600;
+    margin-top: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.btn-voltar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: #bfa600;
+    border: 2px solid #bfa600;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    font-weight: bold;
+    padding: 10px 26px;
+    margin: 18px auto 0 auto;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    width: fit-content;
+}
+.btn-voltar:hover {
+    background: #bfa600;
+    color: #fff;
+}
+.btn-voltar svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+}
+main {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px 40px 24px;
+}
+.resumo-compra h2,
+.dados-comprador h2 {
+    color: #bfa600;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+}
+.carro-resumo {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+.carro-img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    background: #eee;
+}
+.carro-info {
+    flex: 1;
+}
+.carro-nome {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 8px;
+}
+.carro-preco {
+    font-size: 1.18rem;
+    color: #bfa600;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.carro-detalhes {
+    font-size: 1.08rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+.form-compra {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form-compra label {
+    font-size: 1.08rem;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.form-compra input[type="text"],
+.form-compra input[type="email"],
+.form-compra input[type="tel"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-top: 2px;
+}
+.form-compra input[type="radio"] {
+    margin-right: 8px;
+}
+.btn-finalizar {
+    margin-top: 18px;
+    background: #bfa600;
+    color: #fff;
+    font-size: 1.18rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 220px;
+    align-self: center;
+}
+.btn-finalizar:hover {
+    background: #222;
+    color: #bfa600;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+@media (max-width: 900px) {
+    main {
+        padding: 12px 2vw 24px 2vw;
+    }
+    .carro-resumo {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .carro-img {
+        width: 98vw;
+        max-width: 320px;
+        height: 120px;
+    }
+}

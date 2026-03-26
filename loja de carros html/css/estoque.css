@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+.header-com-banner {
+    min-height: 120px;
+    background: #111;
+    padding-bottom: 12px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 32px 0 0 0;
+    gap: 0;
+}
+
+.logo-img,
+.logo-img-grande {
+    height: 96px; /* aumente o tamanho da logo aqui */
+    border-radius: 8px;
+    background: #fff;
+    padding: 4px;
+}
+
+.logo-site {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #bfa600;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.btn-estoque {
+    display: inline-block;
+    padding: 10px 24px;
+    background: #bfa600;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: background 0.18s;
+}
+
+.btn-estoque:hover {
+    background: #8d7a00;
+}
+
+.carros-disponiveis-title {
+    text-align: center;
+    margin: 40px 0 24px 0;
+    color: #222;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.carros-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.carro-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0002;
+    padding: 24px 20px 20px 20px;
+    width: 290px;
+    text-align: center;
+    transition: transform 0.18s, box-shadow 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carro-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px #bfa60044;
+}
+
+.carro-card img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px #bfa60022;
+}
+
+.carro-card h3 {
+    color: #bfa600;
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+.carro-card p {
+    color: #444;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #bfa600;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.18s;
+}
+
+.btn-saiba-mais:hover {
+    background: #8d7a00;
+}
+
+footer {
+    background: #111;
+    padding: 24px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.auth-top-buttons {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.btn-auth-topo {
+    display: inline-block;
+    padding: 8px 22px;
+    background: #bfa600;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    font-size: 1rem;
+    transition: background 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 12px #bfa60022;
+    cursor: pointer;
+}
+
+.btn-auth-topo:hover,
+.btn-auth-topo:focus {
+    background: #8d7a00;
+    color: #fff;
+    box-shadow: 0 4px 18px #bfa60044;
+    outline: none;
+}
