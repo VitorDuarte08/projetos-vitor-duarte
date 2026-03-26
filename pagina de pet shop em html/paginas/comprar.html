@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comprar Produto - PetCare</title>
+  <link rel="icon" href="../imagens/imagemlogo.jpg" type="image/x-icon"/>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <span><a href="sobre.html" style="color: yellow;">Voltar</a></span>
+  </div>
+  <div class="header">Finalizar Compra</div>
+  <div class="compra-container">
+    <div id="produto-info">
+      <img id="produto-img" src="" alt="Produto" style="max-width:160px; border-radius:10px; margin-bottom:15px;">
+      <h2 id="produto-nome">Produto</h2>
+      <p id="produto-preco" style="font-size:20px; color:#ff6600; font-weight:bold;"></p>
+    </div>
+    <form>
+      <input type="text" placeholder="Seu nome" required><br>
+      <input type="email" placeholder="Seu e-mail" required><br>
+      <input type="text" placeholder="Endereço de entrega" required><br>
+      <label style="display:block; margin:15px 0 5px 0; text-align:left;">Método de Pagamento:</label>
+      <select required style="width:100%;padding:10px;border-radius:5px;border:1px solid #ccc;">
+        <option value="">Selecione</option>
+        <option value="pix">Pix</option>
+        <option value="cartao">Cartão de Crédito</option>
+        <option value="boleto">Boleto Bancário</option>
+      </select>
+      <button type="submit">Confirmar Compra</button>
+    </form>
+    <button class="voltar-btn" onclick="window.history.back()">Voltar</button>
+  </div>
+  <div class="footer">&copy; 2025 PetCare - Todos os direitos reservados</div>
+  <script>
+    // Dados dos produtos
+    const produtos = {
+  "Cama Confortável": {
+    preco: "R$ 79,90",
+    img: "../imagens/imagem4.jpg"
+  },
+  "Brinquedo Interativo": {
+    preco: "R$ 39,90",
+    img: "../imagens/imagem3.jpg"
+  },
+  "Ração de Cachorro": {
+    preco: "R$ 59,90",
+    img: "../imagens/imagem2.jpg"
+  }
+};
+
+    // Pega o nome do produto da URL
+    const params = new URLSearchParams(window.location.search);
+    let produto = params.get('produto');
+    if(produto) {
+      produto = decodeURIComponent(produto).replace(/%20/g, " ");
+      // Corrige nome para "Banho & Tosa" vindo da URL
+      if(produto === "Banho & Tosa" || produto === "Banho e Tosa") produto = "Banho e Tosa";
+      document.getElementById('produto-nome').textContent = produto;
+      if(produtos[produto]) {
+        document.getElementById('produto-preco').textContent = produtos[produto].preco;
+        document.getElementById('produto-img').src = produtos[produto].img;
+        document.getElementById('produto-img').alt = produto;
+      } else {
+        document.getElementById('produto-preco').textContent = "";
+        document.getElementById('produto-img').style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

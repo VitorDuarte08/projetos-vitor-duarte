@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - PetCare</title>
+  <link rel="icon" href="../imagens/imagemlogo.jpg" type="image/x-icon"/>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <span>Não tem uma conta? <a href="cadastro.html" style="color: yellow;">Cadastre-se</a></span>
+  </div>
+  <div class="header">Contato - PetCare</div>
+  <div class="menu">
+    <a href="../index.html.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+  </div>
+  <div class="banner">
+    <div class="banner-text">
+      <h2>Informações do PetCare</h2>
+      <!-- Logo SVG centralizada -->
+      <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="55" fill="#ff6600" stroke="#fff" stroke-width="6"/>
+        <ellipse cx="60" cy="70" rx="32" ry="28" fill="#fff"/>
+        <ellipse cx="45" cy="55" rx="8" ry="12" fill="#ff6600"/>
+        <ellipse cx="75" cy="55" rx="8" ry="12" fill="#ff6600"/>
+        <circle cx="50" cy="60" r="3" fill="#fff"/>
+        <circle cx="70" cy="60" r="3" fill="#fff"/>
+        <ellipse cx="60" cy="80" rx="10" ry="6" fill="#ff6600"/>
+        <ellipse cx="60" cy="82" rx="5" ry="2" fill="#fff" opacity="0.7"/>
+        <text x="60" y="110" text-anchor="middle" font-size="16" fill="#fff" font-family="Arial" font-weight="bold">PetCare</text>
+      </svg>
+      <div class="formulario-cadastros">
+        <div class="cadastro-box">
+          <h3>Cadastro do Cliente</h3>
+          <form>
+            <input type="text" placeholder="Nome completo" required><br>
+            <input type="email" placeholder="E-mail" required><br>
+            <input type="tel" placeholder="Telefone" required><br>
+            <input type="text" placeholder="Endereço" required><br>
+            <button type="submit">Cadastrar Cliente</button>
+          </form>
+        </div>
+        <div class="cadastro-box">
+          <h3>Cadastro do Pet</h3>
+          <form>
+            <input type="text" placeholder="Nome do Pet" required><br>
+            <input type="text" placeholder="Espécie (ex: Cachorro, Gato)" required><br>
+            <input type="text" placeholder="Raça" required><br>
+            <input type="number" placeholder="Idade" min="0" required><br>
+            <select required>
+              <option value="">Sexo</option>
+              <option value="macho">Macho</option>
+              <option value="femea">Fêmea</option>
+            </select><br>
+            <button type="submit">Cadastrar Pet</button>
+          </form>
+        </div>
+      </div>
+      <h3>Ouça nossa Visão, Missão e Valores</h3>
+      <audio controls>
+        <source src="../audio/visao-missao-valores.mp3.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+      <br><br>
+      <h3>Vídeo sobre cuidados com PETs</h3>
+      <div class="video-centralizado">
+        <iframe src="https://www.youtube.com/embed/YfVK0A0Q34A" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h3>Sua Localização</h3>
+      <p id="localizacao">Carregando localização...</p>
+      <div id="mapa" style="width:100%;height:300px;margin-top:10px;display:none;"></div>
+    </div>
+  </div>
+  <div class="footer">&copy; 2025 PetCare - Todos os direitos reservados</div>
+  <script>
+    // Geolocalização e mapa
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        document.getElementById("localizacao").innerHTML = `Latitude: ${lat.toFixed(4)} | Longitude: ${lon.toFixed(4)}`;
+        // Exibe o mapa do Google Maps
+        const mapa = document.getElementById("mapa");
+        mapa.style.display = "block";
+        mapa.innerHTML = `<iframe width="100%" height="100%" frameborder="0" style="border:0"
+          src="https://www.google.com/maps?q=${lat},${lon}&z=15&output=embed" allowfullscreen></iframe>`;
+      }, function(error) {
+        document.getElementById("localizacao").innerHTML = "Permissão negada ou erro ao obter localização.";
+      });
+    } else {
+      document.getElementById("localizacao").innerHTML = "Geolocalização não suportada pelo navegador.";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,563 @@
+/* Reset e base */
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topo */
+.top-bar {
+  background-color: #333;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  font-size: 14px;
+}
+.top-bar a {
+  color: yellow;
+  text-decoration: underline;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #ff6600;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #ff8533;
+  padding: 15px;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.menu a:hover {
+  background-color: #e65c00;
+  border-radius: 5px;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: transparent;
+  color: #333;
+}
+.banner-text {
+  flex: 1 1 300px;
+  margin-right: 20px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  padding: 24px 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  max-width: 700px;
+}
+@media (max-width: 900px) {
+  .banner {
+    padding: 15px 2vw;
+  }
+  .banner-text {
+    margin-right: 0;
+    padding: 16px 6px;
+  }
+}
+.banner img {
+  max-width: 100%;
+  border-radius: 10px;
+  flex: 1 1 250px;
+}
+
+/* Serviços */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #333;
+  background-image: url("imagens/imagem1.jpg.jpg");
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  min-height: 350px;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .services {
+    min-height: 250px;
+    padding: 30px 5px;
+  }
+}
+.services h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.service-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.service {
+  background-color: rgba(255, 133, 51, 0.8);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #333;
+  color:  #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* Tabela de preços */
+.price-table {
+  margin: 30px auto 10px auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.price-table th, .price-table td {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  text-align: center;
+}
+.price-table th {
+  background-color: #ff6600;
+  color: #fff;
+}
+.price-table td {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* Imagens de produtos e botões de comprar */
+.product-images {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.product-images img {
+  width: 140px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 8px;
+}
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 0 10px;
+}
+.produto img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  background: #fff;
+  padding: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.2s;
+}
+.produto img:hover {
+  transform: scale(1.05);
+}
+.comprar-btn {
+  margin-top: 5px;
+  padding: 10px 24px;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.comprar-btn:hover {
+  background: #e65c00;
+}
+
+/* Cadastro */
+.cadastro-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  text-align: center;
+}
+.cadastro-container h2 {
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+.cadastro-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.cadastro-container button,
+.cadastro-container .google,
+.cadastro-container .apple {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+.cadastro-container button {
+  background: #ff6600;
+}
+.cadastro-container .google {
+  background: #db4437;
+}
+.cadastro-container .apple {
+  background: #222;
+}
+.cadastro-container .voltar {
+  display: block;
+  margin-top: 20px;
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+.cadastro-container .voltar:hover {
+  text-decoration: underline;
+}
+
+/* Compra */
+.compra-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  text-align: center;
+}
+.compra-container h2 {
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+.compra-container input,
+.compra-container select {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.compra-container button,
+.voltar-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+.compra-container button[type="submit"] {
+  background: #ff6600;
+}
+.voltar-btn {
+  background: #333;
+}
+.voltar-btn:hover {
+  background: #555;
+}
+#produto-info img {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Contato */
+.logo-svg {
+  display: block;
+  margin: 20px auto 10px auto;
+  width: 120px;
+  height: 120px;
+}
+.video-centralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+}
+.video-centralizado iframe {
+  width: 80vw;
+  max-width: 600px;
+  height: 40vw;
+  max-height: 340px;
+  min-height: 220px;
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+/* Contato container */
+.contato-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  text-align: center;
+}
+.contato-container h2, .contato-container h3 {
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+.contato-container input,
+.contato-container textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+}
+.contato-container textarea {
+  min-height: 80px;
+}
+.contato-container button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background: #ff6600;
+}
+.contato-info {
+  margin-top: 25px;
+  text-align: left;
+  color: #333;
+  font-size: 15px;
+}
+.contato-info p {
+  margin: 6px 0;
+}
+
+/* Fundo colorido para páginas específicas */
+.bg-sobre {
+  background-color: #e0f7fa;
+  min-height: 100vh;
+}
+.bg-servicos {
+  background-color: #fff3e0; /* laranja claro */
+  min-height: 100vh;
+}
+/* Adicione ao final do style.css */
+
+/* Responsividade e visual da tabela */
+.tabela-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+.price-table {
+  width: 98%;
+  min-width: 340px;
+  max-width: 1100px;
+  margin: 30px auto 10px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 1.1em;
+}
+.price-table th, .price-table td {
+  border: 1px solid #e0e0e0;
+  padding: 16px 20px;
+  text-align: center;
+}
+.price-table th {
+  background-color: #ff6600;
+  color: #fff;
+  font-size: 1.15em;
+}
+.price-table td {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* Imagens dos produtos mais bonitas e responsivas */
+.product-images {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 0 10px;
+}
+.produto img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  background: #fff;
+  padding: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.2s;
+}
+.produto img:hover {
+  transform: scale(1.05);
+}
+.comprar-btn {
+  margin-top: 5px;
+  padding: 10px 24px;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.comprar-btn:hover {
+  background: #e65c00;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 700px) {
+  .product-images {
+    gap: 16px;
+  }
+  .produto {
+    width: 100%;
+  }
+  .produto img {
+    width: 90vw;
+    max-width: 260px;
+    height: 32vw;
+    max-height: 180px;
+  }
+  .price-table th, .price-table td {
+    padding: 10px 6px;
+    font-size: 1em;
+  }
+}
+
+/* Formulário de cadastros */
+.formulario-cadastros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin: 30px 0 40px 0;
+}
+.cadastro-box {
+  background: #fff;
+  border: 2px solid #ff6600;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+  padding: 24px 18px 18px 18px;
+  min-width: 260px;
+  max-width: 320px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.cadastro-box h3 {
+  color: #ff6600;
+  margin-bottom: 16px;
+}
+.cadastro-box input,
+.cadastro-box select {
+  width: 95%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.cadastro-box button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background: #ff6600;
+  transition: background 0.2s;
+}
+.cadastro-box button:hover {
+  background: #e65c00;
+}
+@media (max-width: 800px) {
+  .formulario-cadastros {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .cadastro-box {
+    max-width: 98vw;
+  }
+}
